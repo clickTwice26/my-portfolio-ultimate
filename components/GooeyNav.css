@@ -125,14 +125,15 @@
 .gooey-nav-container .effect.filter {
   filter: blur(7px) contrast(100) blur(0);
   mix-blend-mode: lighten;
+  pointer-events: none;
 }
 
 .gooey-nav-container .effect.filter::before {
   content: '';
   position: absolute;
-  inset: -75px;
+  inset: -10px;
   z-index: -2;
-  background: black;
+  background: transparent;
 }
 
 .gooey-nav-container .effect.filter::after {

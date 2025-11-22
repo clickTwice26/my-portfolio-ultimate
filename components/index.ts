@@ -2,6 +2,7 @@ export * from './Container';
 export * from './SectionHeader';
 export * from './ThemeToggle';
 export { default as GooeyNav } from './GooeyNav';
+export { default as LightRays } from './LightRays';
 export * from './Hero';
 export * from './About';
 export * from './Experience';

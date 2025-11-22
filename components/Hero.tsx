@@ -4,21 +4,24 @@ import { motion } from 'framer-motion';
 import { Container } from './Container';
 import { fadeInUp, fadeInLeft, textReveal, staggerContainer } from '@/lib/animations';
 import BlurText from './BlurText';
+import LightRays from './LightRays';
 
 export function Hero() {
   return (
     <section className="relative py-20 sm:py-32 overflow-hidden">
-      {/* Animated background gradient */}
-      <motion.div
-        className="absolute inset-0 opacity-30"
-        animate={{
-          background: [
-            'radial-gradient(circle at 20% 50%, rgba(34, 197, 94, 0.1) 0%, transparent 50%)',
-            'radial-gradient(circle at 80% 50%, rgba(34, 197, 94, 0.15) 0%, transparent 50%)',
-            'radial-gradient(circle at 20% 50%, rgba(34, 197, 94, 0.1) 0%, transparent 50%)',
-          ],
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
+      {/* LightRays effect */}
+      <LightRays
+        raysOrigin="top-center"
+        raysColor="#22c55e"
+        raysSpeed={1.2}
+        lightSpread={0.6}
+        rayLength={1.5}
+        followMouse={true}
+        mouseInfluence={0.15}
+        noiseAmount={0.08}
+        distortion={0.03}
+        fadeDistance={1.2}
+        saturation={0.9}
       />
       
       <Container>
