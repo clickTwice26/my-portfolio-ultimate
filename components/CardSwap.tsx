@@ -57,7 +57,9 @@ const CardSwap: React.FC<CardSwapProps> = ({
   easing = 'elastic',
   children
 }) => {
-  const config =
+  const childArr = useMemo(() => Children.toArray(children), [children]);
+  
+  const config = useMemo(() => 
     easing === 'elastic'
       ? {
           ease: 'elastic.out(0.6,0.9)',
@@ -74,12 +76,11 @@ const CardSwap: React.FC<CardSwapProps> = ({
           durReturn: 0.8,
           promoteOverlap: 0.45,
           returnDelay: 0.2
-        };
+        }, [easing]);
 
-  const childArr = useMemo(() => Children.toArray(children), [children]);
   const refs = useMemo(
     () => childArr.map(() => React.createRef<HTMLDivElement>()),
-    [childArr.length]
+    [childArr]
   );
 
   const order = useRef(Array.from({ length: childArr.length }, (_, i) => i));

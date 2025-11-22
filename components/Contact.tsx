@@ -52,7 +52,7 @@ export function Contact() {
             <motion.div variants={fadeInUp} className="relative z-10">
               <h3 className="text-2xl font-semibold mb-4">Ready to start your next project?</h3>
               <p className="text-muted max-w-2xl mx-auto mb-8 leading-relaxed">
-                I'm available for freelance work, full-time positions, and consulting projects. Let's discuss how
+                I&apos;m available for freelance work, full-time positions, and consulting projects. Let&apos;s discuss how
                 I can help build robust, scalable backend solutions for your business.
               </p>
 

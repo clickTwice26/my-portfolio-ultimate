@@ -37,12 +37,12 @@ export function About() {
               thoughtful data modeling, robust testing, and strong observability.
             </p>
             <p>
-              As VP of Engineering at LocalBy, I've architected and delivered AWS microservices ecosystems with 
+              As VP of Engineering at LocalBy, I&apos;ve architected and delivered AWS microservices ecosystems with 
               event-driven architectures. At DSAT School, I built complete learning platforms including payment 
               systems, AI-powered chatbots, and scalable backend architectures serving thousands of students.
             </p>
             <p>
-              I'm passionate about solving complex distributed systems challenges and building tools that empower 
+              I&apos;m passionate about solving complex distributed systems challenges and building tools that empower 
               users. My work spans from real-time competitive platforms to AI-powered educational systems, always 
               focusing on scalability, performance, and user experience.
             </p>
