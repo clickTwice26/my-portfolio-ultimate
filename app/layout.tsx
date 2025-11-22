@@ -1,8 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
-import { ThemeToggle } from '@/components/ThemeToggle';
-import { Container } from '@/components/Container';
+import GooeyNav from '@/components/GooeyNav';
 
 export const metadata: Metadata = {
   title: 'Shagato Chowdhury — Backend Architect & Lead Developer',
@@ -20,23 +19,44 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://shagato.me'),
 };
 
+const navItems = [
+  { label: 'Home', href: '#hero' },
+  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Education', href: '#education' },
+  { label: 'Contact', href: '#contact' },
+];
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="dark">
       <body className="min-h-dvh antialiased">
-        <header className="border-b border-border/80">
-          <Container className="flex items-center justify-between py-5">
-            <div className="font-semibold tracking-tight">Shagato Chowdhury</div>
-            <ThemeToggle />
-          </Container>
+        <header className="sticky top-0 z-50 border-b border-border/80 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4">
+            <div className="text-lg font-bold">
+              Shagato<span className="text-primary">.</span>
+            </div>
+            <GooeyNav
+              items={navItems}
+              particleCount={12}
+              particleDistances={[80, 10]}
+              particleR={80}
+              initialActiveIndex={0}
+              animationTime={500}
+              timeVariance={250}
+              colors={[1, 2, 3, 1, 2, 3, 1, 4]}
+            />
+          </div>
         </header>
         <main>
           {children}
         </main>
         <footer className="border-t border-border/80 py-10 mt-20">
-          <Container className="text-center text-sm text-muted">
+          <div className="container mx-auto max-w-screen-2xl px-4 text-center text-sm text-muted">
             © {new Date().getFullYear()} Shagato Chowdhury. All rights reserved.
-          </Container>
+          </div>
         </footer>
       </body>
     </html>

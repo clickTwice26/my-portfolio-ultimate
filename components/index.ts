@@ -1,6 +1,7 @@
 export * from './Container';
 export * from './SectionHeader';
 export * from './ThemeToggle';
+export { default as GooeyNav } from './GooeyNav';
 export * from './Hero';
 export * from './About';
 export * from './Experience';
